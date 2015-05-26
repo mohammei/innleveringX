@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'theme',
+    #laste ned apper som man har laget på terminal også koble de til her
 )
 
 MIDDLEWARE_CLASSES = (
