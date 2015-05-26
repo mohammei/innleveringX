@@ -30,4 +30,7 @@ def user_login(request):
     return render(request, 'useraccount/login.html', context)
 
 
+def user_account(request):
+    return render(request, 'useraccount/account.html')
+
 # Create your views here.
