@@ -25,20 +25,21 @@
                 </li>
 </ul>
  {% else %}
-   {{ user.username }}
 
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
-
    <span class="caret"></span></a>
+
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="{%url 'user_account'%}">Account</a></li>
                     <li class="divider"></li>
                     <li><a href="#"></a></li>
+
                   </ul>
                 </li>
                 </div>
                 </nav>
+                     {{ user.username }}
+
 
 
 
