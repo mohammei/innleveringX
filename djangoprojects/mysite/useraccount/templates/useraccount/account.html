@@ -1,0 +1,14 @@
+{% extends 'useraccount/base.html' %}
+{% block container %}
+<h3>This is Where You change account Information</h3>
+<form method="POST" action="#">{% csrf_token %}
+<div class="form-group">
+        <input type="text" class="form-control" name="firstname" id="ChangeFirstName" placeholder="Change First Name">
+        <input type="text" class="form-control" name="firstname" id="ChangeLastName" placeholder="Change Last Name">
+        <input type="text" class="form-control" name="firstname" id="ChangeEmail" placeholder="Change  E-Mail">
+
+      </div>
+</form>
+
+
+{% endblock %}
