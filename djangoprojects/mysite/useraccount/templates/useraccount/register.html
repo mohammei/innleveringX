@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
           </button>
 
-<form method="POST" action="#">{% csrf_token %}
+<form method="POST" action="{% url 'user_register' %}">{% csrf_token %}
 <div class="form-group">
         <label for="inputFirstName">First Name</label>
         <input type="text" class="form-control" name="firstname" id="inputFirstName" placeholder="Enter First Name">
