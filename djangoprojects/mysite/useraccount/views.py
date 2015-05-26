@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
@@ -12,6 +13,7 @@ def user_register(request):
         user.email = request.POST.get('email')
         user.set_password(request.POST.get('password'))
         user.save()
+        context['user_saved_successfully'] = True
     return render(request, 'useraccount/register.html', context)
 
 def user_login(request):
