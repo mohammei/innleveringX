@@ -25,10 +25,25 @@
                 </li>
 </ul>
  {% else %}
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  {{ user.username }}
 
 
-            {% endif %}
+   <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Account</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                </li>
+                </div>
+                </nav>
 
 
-        {% endblock %}
+
+
+{% endif %}
+
+
+{% endblock %}
 
