@@ -3,7 +3,9 @@
 
  <form class="form-signin" method="POST" action="#">{% csrf_token %}
 <h2 class="form-signin-heading">Sign in</h2>
-
+{% if login_failed %}
+        <div class="alert alert-danger" role="alert">Login failed. Please try again!</div>
+        {% endif %}
 <label for="inputUsername" class="sr-only">Username</label>
         <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
