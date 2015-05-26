@@ -14,4 +14,20 @@ def user_register(request):
         user.save()
     return render(request, 'useraccount/register.html', context)
 
+def user_login(request):
+    context = {}
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            # redirect to a success page.
+            return redirect('frontpage')
+        else:
+            #Display error message
+            context['login_failed'] = True
+    return render(request, 'useraccount/login.html', context)
+
+
 # Create your views here.
