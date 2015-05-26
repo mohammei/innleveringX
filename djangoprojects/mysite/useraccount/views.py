@@ -24,10 +24,8 @@ def user_login(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
-            # redirect to a success page.
             return redirect('frontpage')
         else:
-            #Display error message
             context['login_failed'] = True
     return render(request, 'useraccount/login.html', context)
 
